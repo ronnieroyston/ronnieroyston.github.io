@@ -1,0 +1,241 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+
+
+
+:root {
+  --md-ref-typeface-brand: 'Martian Mono';
+  --md-ref-typeface-plain: 'Martian Mono';
+
+/*  --md-sys-color-primary: rgb(41, 98, 255);
+  --md-sys-color-secondary: rgb(68, 138, 255);*/
+
+
+  --md-sys-color-primary: rgb(0 32 79);
+  --md-sys-color-surface-tint: rgb(68 94 145);
+  --md-sys-color-on-primary: rgb(255 255 255);
+  --md-sys-color-primary-container: rgb(39 66 116);
+  --md-sys-color-on-primary-container: rgb(255 255 255);
+  --md-sys-color-secondary: rgb(26 34 51);
+  --md-sys-color-on-secondary: rgb(255 255 255);
+  --md-sys-color-secondary-container: rgb(59 67 85);
+  --md-sys-color-on-secondary-container: rgb(255 255 255);
+  --md-sys-color-tertiary: rgb(49 25 52);
+  --md-sys-color-on-tertiary: rgb(255 255 255);
+  --md-sys-color-tertiary-container: rgb(84 58 86);
+  --md-sys-color-on-tertiary-container: rgb(255 255 255);
+  --md-sys-color-error: rgb(78 0 2);
+  --md-sys-color-on-error: rgb(255 255 255);
+  --md-sys-color-error-container: rgb(140 0 9);
+  --md-sys-color-on-error-container: rgb(255 255 255);
+  --md-sys-color-background: rgb(249 249 255);
+  --md-sys-color-on-background: rgb(26 27 32);
+  --md-sys-color-surface: rgb(249 249 255);
+  --md-sys-color-on-surface: rgb(0 0 0);
+  --md-sys-color-surface-variant: rgb(225 226 236);
+  --md-sys-color-on-surface-variant: rgb(33 36 43);
+  --md-sys-color-outline: rgb(64 67 75);
+  --md-sys-color-outline-variant: rgb(64 67 75);
+  --md-sys-color-shadow: rgb(0 0 0);
+  --md-sys-color-scrim: rgb(0 0 0);
+  --md-sys-color-inverse-surface: rgb(47 48 54);
+  --md-sys-color-inverse-on-surface: rgb(255 255 255);
+  --md-sys-color-inverse-primary: rgb(230 236 255);
+  --md-sys-color-primary-fixed: rgb(39 66 116);
+  --md-sys-color-on-primary-fixed: rgb(255 255 255);
+  --md-sys-color-primary-fixed-dim: rgb(12 43 92);
+  --md-sys-color-on-primary-fixed-variant: rgb(255 255 255);
+  --md-sys-color-secondary-fixed: rgb(59 67 85);
+  --md-sys-color-on-secondary-fixed: rgb(255 255 255);
+  --md-sys-color-secondary-fixed-dim: rgb(37 45 62);
+  --md-sys-color-on-secondary-fixed-variant: rgb(255 255 255);
+  --md-sys-color-tertiary-fixed: rgb(84 58 86);
+  --md-sys-color-on-tertiary-fixed: rgb(255 255 255);
+  --md-sys-color-tertiary-fixed-dim: rgb(60 36 63);
+  --md-sys-color-on-tertiary-fixed-variant: rgb(255 255 255);
+  --md-sys-color-surface-dim: rgb(217 217 224);
+  --md-sys-color-surface-bright: rgb(249 249 255);
+  --md-sys-color-surface-container-lowest: rgb(255 255 255);
+  --md-sys-color-surface-container-low: rgb(243 243 250);
+  --md-sys-color-surface-container: rgb(238 237 244);
+  --md-sys-color-surface-container-high: rgb(232 231 239);
+  --md-sys-color-surface-container-highest: rgb(226 226 233);
+
+
+}
+md-icon {
+    vertical-align: middle;
+}
+md-tabs {
+    margin-bottom:12px;
+}
+md-linear-progress {
+    position:fixed;
+    bottom:0;
+    left:0px;
+    width: 100%;
+}
+
+.r {
+	margin-left:24px;
+}
+.btns {
+	margin:6px;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+html{
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+
+}
+body {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  
+  grid-gap: 4px;
+  outline: 1px dashed #616161;
+  min-height: 100vh;
+  min-width: 0;
+  color: #424242;
+  background-color: #fafafa;
+  font-family: 'Martian Mono', monospace;
+}
+body > aside {
+  overflow: hidden;
+  min-width: 0;
+  grid-area: aside;
+  padding: 24px;
+}
+body > aside > section {
+    margin: 0px 12px 0px 12px;
+}
+body > header {
+  display: flex;
+  align-items: center;
+  grid-area: header;
+
+}
+body > header figure {
+	text-decoration: none;
+	color: inherit;
+    max-width: 196px;
+    margin: 0px 12px;
+}
+body > header figure a {
+    display: flex;
+    align-items: center;
+}
+body > header > figure a figcaption {
+    margin-left: 8px;
+}
+
+body > header > nav {
+    flex: 1 1 auto;
+    text-align: right;
+    margin: 0px 24px;
+}
+body > main {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;  /* needed for scroll suppression */
+  min-width: 0;      /* needed for scroll suppression */
+  margin:18px;
+  grid-area: main;
+}
+body > main > section {
+	columns: 1;
+    margin-top:24px;
+
+}
+body > nav {
+  overflow: hidden;  /* needed for scroll suppression */
+  min-width: 0;      /* needed for scroll suppression */    
+  font-weight: 300;
+  padding: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  grid-area: nav;
+}
+body > nav:first-child {
+    padding-top:32px;
+}
+body > nav ul {
+	list-style: none;
+	margin: 24px;
+    text-align: left;
+}
+body > nav ul > li {
+	margin-top:16px;
+}
+body > footer {
+  overflow: hidden;  /* needed for scroll suppression */
+  min-width: 0;      /* needed for scroll suppression */
+  text-align: center;
+  grid-area: footer;
+}
+body > footer > section {
+    margin: 1em;
+    color: #9e9e9e;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+        grid-template-rows: 50px auto 1fr auto auto;
+        grid-template-columns: 1fr;
+    }
+    body > header {
+        width:100%;
+    }
+    body > main > section {
+    	width: fit-content;
+        margin:24px;
+    }
+}
+@media screen and (min-width: 768px) {
+  body {
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 312px 1fr 312px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body > main > section {
+        columns: 2;
+    }
+}
+

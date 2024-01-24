@@ -1,18 +1,352 @@
 <!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
-  <title>Basic Web Page</title>
+  <title>Material 3 Web Demo by Ronnie Royston</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <meta name="description" content="Basic Web Page">
   <meta name="author" content="Ronnie Royston">
   <link rel="icon" type="image/x-icon" href="/media/logo-48x48.png">
+  <style>html{visibility: hidden;opacity:0;}</style>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body class="body-full-wide">
-	<h1>Hello World</h1>
-	<img src="./media/card.jpg">
+  <header>
+    <figure>
+      <a href="/">
+        <svg width=48 height=48 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>material_design</title>
+          <rect width="24" height="24" fill="none"/>
+          <path d="M21,12a9,9,0,0,0-2-5.62V17.63A8.78,8.78,0,0,0,21,12m-3.37,7H6.38a9.5,9.5,0,0,0,2.67,1.41A8.91,8.91,0,0,0,12,21,8.86,8.86,0,0,0,15,20.41,9.72,9.72,0,0,0,17.63,19M11,17,7,9v8h4m6-8-4,8h4V9m-5,5.53L15.75,7H8.25L12,14.53M17.63,5A8.91,8.91,0,0,0,6.38,5H17.63M5,17.63V6.38A9,9,0,0,0,3,12a8.78,8.78,0,0,0,2,5.63M23,12a10.57,10.57,0,0,1-3.22,7.78A10.57,10.57,0,0,1,12,23a10.59,10.59,0,0,1-7.78-3.22A10.57,10.57,0,0,1,1,12,10.59,10.59,0,0,1,4.22,4.22,10.59,10.59,0,0,1,12,1a10.57,10.57,0,0,1,7.78,3.22A10.59,10.59,0,0,1,23,12Z"/>
+        </svg>
+        <figcaption>Material 3 for Web</figcaption>
+      </a>
+    </figure>
+    <nav>
+      <md-text-button id="sign-in">Sign In</md-text-button>
+    </nav>
+  </header>
+ 
+  <nav>
+    <h2>Try Out The Custom Elements</h2>
+    <p style="border-left: 4px solid gray; padding-left:12px">
+      Material Design is an adaptable system of guidelines, components, and tools that support the best practices of user interface design.
+    </p>
+    <p>
+      Theme colors generated using Figma's <a href="https://www.figma.com/community/plugin/1034969338659738588/material-theme-builder">Material Theme Builder</a>.
+    </p>
+  </nav>
+
+  <aside>
+    <md-list>
+      <md-list-item>
+        Apple
+      </md-list-item>
+      <md-list-item>
+        <div slot="headline">Cucumber</div>
+        <div slot="supporting-text">Cucumbers are long green fruits that are just as long as this multi-line description</div>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item interactive href="#" target="_blank">
+        <div slot="headline">Shop for Kiwis</div>
+        <md-icon slot="end">open_in_new</md-icon>
+      </md-list-item>
+    </md-list>
+  </aside>
+
+  <main>
+    <h1>Google Material Design 3 for Web (M3)</h1>
+    <h2>
+      A Working Demo.
+    </h2>
+    <md-divider style="margin-bottom: 24px"></md-divider>
+
+    <md-chip-set style="display:inline-block">
+      <md-assist-chip label="Assist" avatar>
+        <img slot="icon" src="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" height=18>
+      </md-assist-chip>
+      <md-filter-chip label="Filter">
+        <md-icon slot="icon">filter_list</md-icon>
+      </md-filter-chip>
+      <md-input-chip label="Input"></md-input-chip>
+      <md-suggestion-chip label="Suggestion"></md-suggestion-chip>
+    </md-chip-set>
+
+    <label style="float:right">
+      Enable Element
+      <md-switch icons style="vertical-align: middle;"></md-switch>
+    </label>
+
+    <section>
+      <section>
+        <h4>Tabs</h4>   
+        <md-tabs aria-label="Content to view">
+          <md-primary-tab id="photos-tab" aria-controls="photos-panel">
+            Photos
+          </md-primary-tab>
+          <md-primary-tab id="videos-tab" aria-controls="videos-panel">
+            Videos
+          </md-primary-tab>
+          <md-primary-tab id="music-tab" aria-controls="music-panel">
+            Music
+          </md-primary-tab>
+        </md-tabs>
+
+        <div id="photos-panel" role="tabpanel" aria-labelledby="photos-tab">
+          Panel One, Photos
+          <md-icon>images_mode</md-icon>
+        </div>
+        <div id="videos-panel" role="tabpanel" aria-labelledby="videos-tab" hidden>
+          Panel Two, Videos
+          <md-icon>movie</md-icon>
+        </div>
+        <div id="music-panel" role="tabpanel" aria-labelledby="music-tab" hidden>
+          Panel Three, Music
+          <md-icon>music_note</md-icon>
+        </div>
+      </section>
+
+      <section>
+        <h4>Menu and Select</h4>
+        <span style="position: relative">
+          <md-icon-button id="usage-submenu-anchor">
+            <md-icon>menu</md-icon>
+          </md-icon-button>
+          <md-menu has-overflow id="usage-submenu" anchor="usage-submenu-anchor">
+            <md-sub-menu>
+              <md-menu-item slot="item">
+              <div slot="headline">Fruits with A</div>
+                <md-icon slot="end">arrow_right</md-icon>
+              </md-menu-item>
+              <!-- Submenu must be slotted into sub-menu's menu slot -->
+              <md-menu slot="menu">
+                <md-menu-item>
+                  <div slot="headline">Apricot</div>
+                </md-menu-item>
+                <md-menu-item>
+                  <div slot="headline">Avocado</div>
+                </md-menu-item>
+                <md-sub-menu
+                    menu-corner="start-end"
+                    anchor-corner="start-start">
+                  <md-menu-item slot="item">
+                    <div slot="headline">Apples</div>
+                    <md-icon slot="start">
+                      arrow_left
+                    </md-icon>
+                  </md-menu-item>
+                  <md-menu slot="menu">
+                    <md-menu-item>
+                      <div slot="headline">Fuji</div>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <div slot="headline" style="white-space: nowrap;">Granny Smith</div>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <div slot="headline" style="white-space: nowrap;">Red Delicious</div>
+                    </md-menu-item>
+                  </md-menu>
+                </md-sub-menu>
+              </md-menu>
+            </md-sub-menu>
+            <md-menu-item>
+              <div slot="headline">Banana</div>
+            </md-menu-item>
+            <md-menu-item>
+              <div slot="headline">Cucumber</div>
+            </md-menu-item>
+          </md-menu>
+        </span>
+
+        <md-outlined-select>
+          <md-select-option aria-label="blank"></md-select-option>
+          <md-select-option selected value="apple">
+            <div slot="headline">Apple</div>
+          </md-select-option>
+          <md-select-option value="apricot">
+            <div slot="headline">Apricot</div>
+          </md-select-option>
+        </md-outlined-select>
+
+        <md-filled-select>
+          <md-select-option aria-label="blank"></md-select-option>
+          <md-select-option value="apple">
+            <div slot="headline">Apple</div>
+          </md-select-option>
+          <md-select-option value="apricot">
+            <div slot="headline">Apricot</div>
+          </md-select-option>
+        </md-filled-select>
+      </section>
+
+      <section>
+        <h4>Input</h4>
+        <label>
+          <md-checkbox ></md-checkbox>
+          Click Me
+        </label>
+        <label class="r" for="cats-radio">Cats <md-radio id="cats-radio" name="animals" value="cats"></md-radio></label>
+        <label class="r" for="dogs-radio">Dogs <md-radio id="dogs-radio" name="animals" value="dogs"></md-radio></label>
+        <br>
+        <br>
+        <md-outlined-text-field label="url" type="url" id=url class="validate-on-keyup" supporting-text="validated onKeyUp event">
+        </md-outlined-text-field>
+        <md-filled-text-field type="search" placeholder="Search">
+          <md-icon slot="leading-icon">search</md-icon>
+        </md-filled-text-field>
+      </section>
+
+      <section>
+          <h4>Text Area</h4>
+          <md-filled-text-field label="textarea" type="textarea" label="Vertical resize" rows="4" cols="48">
+          </md-filled-text-field>
+      </section>
+
+      <section>
+          <h4>Range</h4>
+          <label>
+            Continuous
+            <md-slider value="10" labeled></md-slider>
+          </label>
+          <br>
+          <label>
+            Discreet
+            <md-slider ticks step="5" value="50" labeled></md-slider>
+          </label>
+          <br>
+          <label>
+            Range
+            <md-slider range value-start="25" value-end="75"></md-slider>
+          </label>
+      </section>
+
+      <section>
+        <h4>Buttons</h4>
+        
+        <md-filled-button class="btns">Complete</md-filled-button>
+        <md-filled-tonal-button class="btns">
+          Send
+        </md-filled-tonal-button>
+
+        <md-text-button trailing-icon class="btns">
+          Open
+        </md-text-button>
+        <md-elevated-button class="btns">Elevated</md-elevated-button>
+
+        <md-branded-fab size="small" aria-label="Add" class="btns">
+          <svg slot="icon" viewBox="0 0 36 36" width="36px" height="36px">
+            <path fill="#34A853" d="M16 16v14h4V20z"></path>
+            <path fill="#4285F4" d="M30 16H20l-4 4h14z"></path>
+            <path fill="#FBBC05" d="M6 16v4h10l4-4z"></path>
+            <path fill="#EA4335" d="M20 16V6h-4v14z"></path>
+            <path fill="none" d="M0 0h36v36H0z"></path>
+          </svg>
+        </md-branded-fab>
+      </section>
+      <section>
+        <h4>Dialog</h4>
+        <md-outlined-button id="open-dialog" class="btns">
+          <md-icon slot="icon">dialogs</md-icon>
+          Open
+        </md-outlined-button>
+      </section>
+    </section>
+
+    <md-dialog>
+      <div slot="headline">
+        M3 Dialog title
+      </div>
+      <form slot="content" id="form-id" method="dialog">
+        A simple dialog with free-form content in a custom element.
+      </form>
+      <div slot="actions">
+        <md-text-button form="form-id">Ok</md-text-button>
+      </div>
+    </md-dialog>
+    <md-linear-progress value="0.5" buffer="0.8"></md-linear-progress>
+  </main>
+
+  <footer>
+    <md-icon slot="end">barefoot</md-icon>
+    <p>
+    <a href="https://ronnieroyston.com">//ronnieroyston.com</a>
+    </p>
+  </footer>
+
+  <script type="module">
+    const anchorEl = document.body.querySelector('#usage-submenu-anchor');
+    const menuEl = document.body.querySelector('#usage-submenu');
+    menuEl.anchorElement = anchorEl;
+    anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
+  </script>
+
+  <script>
+    (() => {
+      const openDialogButton = document.getElementById("open-dialog");
+      const signInButton = document.getElementById("sign-in");
+      const dialog = document.querySelector("md-dialog");
+      const text = document.getElementById("text");
+      const reset = document.querySelector("[type='reset']");
+      const validateOnKeyupInputs = document.querySelectorAll(".validate-on-keyup");
+      dialog.returnValue = "initialValue";
+
+      const switchInputs = document.querySelectorAll("md-switch");
+
+      switchInputs.forEach(function(input){
+        input.addEventListener('change', function(e){
+          console.dir(e.target.shadowRoot.querySelector("#switch").checked);
+        });
+      })
+
+      validateOnKeyupInputs.forEach(function(input){
+        input.addEventListener('keyup', function(e){
+          console.log(document.getElementById('url').reportValidity());
+          document.getElementById('url').reportValidity();
+        });
+      })
+
+      function handleUserInput(returnValue) {
+        if (!returnValue) {
+          text.innerText += ". There was no return value";
+        } else {
+          text.innerText += ". Return value: " + returnValue;
+        }
+      }
+
+      openDialogButton.addEventListener("click", () => {
+        dialog.show();
+        openCheck(dialog);
+        handleUserInput(dialog.returnValue);
+      });
+
+      signInButton.addEventListener("click", () => {
+        dialog.show();
+        openCheck(dialog);
+        handleUserInput(dialog.returnValue);
+      });
+
+      dialog.addEventListener("close", () => {
+        openCheck(dialog);
+        handleUserInput(dialog.returnValue);
+      });
+
+      document.querySelector("md-tabs").addEventListener('change', (event) => {
+        event.target.parentElement.querySelectorAll('[role="tabpanel"]').forEach(function (el){
+          el.setAttribute("hidden", true);
+        });
+        event.target.parentElement.querySelectorAll('[role="tabpanel"]')[event.target.activeTabIndex].removeAttribute("hidden");
+      });
+
+      window.addEventListener("load", function(){
+        console.log("iran")
+        document.querySelector("html").style="visibility: visible;opacity: 1;"
+      })
+    })();  
+  </script>
+  <script type="module" src="bundle.js"></script>
+</body>
 </html>
