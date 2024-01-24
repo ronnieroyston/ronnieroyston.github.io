@@ -171,7 +171,10 @@ body > main {
 body > main > section {
 	columns: 1;
     margin-top:24px;
-
+}
+body > main > section > section {
+    columns: 1;
+    margin:24px;
 }
 body > nav {
   overflow: hidden;  /* needed for scroll suppression */
