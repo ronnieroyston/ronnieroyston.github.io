@@ -1,15 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;700&display=swap');
-/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
-
-
-
 :root {
   --md-ref-typeface-brand: 'Martian Mono';
   --md-ref-typeface-plain: 'Martian Mono';
-
-/*  --md-sys-color-primary: rgb(41, 98, 255);
-  --md-sys-color-secondary: rgb(68, 138, 255);*/
-
 
   --md-sys-color-primary: rgb(0 32 79);
   --md-sys-color-surface-tint: rgb(68 94 145);
