@@ -319,18 +319,18 @@
 
       openDialogButton.addEventListener("click", () => {
         dialog.show();
-        openCheck(dialog);
+        // openCheck(dialog);
         handleUserInput(dialog.returnValue);
       });
 
       signInButton.addEventListener("click", () => {
         dialog.show();
-        openCheck(dialog);
+        // openCheck(dialog);
         handleUserInput(dialog.returnValue);
       });
 
       dialog.addEventListener("close", () => {
-        openCheck(dialog);
+        // openCheck(dialog);
         handleUserInput(dialog.returnValue);
       });
 
