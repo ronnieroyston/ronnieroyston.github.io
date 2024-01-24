@@ -309,29 +309,17 @@
         });
       })
 
-      // function handleUserInput(returnValue) {
-      //   if (!returnValue) {
-      //     text.innerText += ". There was no return value";
-      //   } else {
-      //     text.innerText += ". Return value: " + returnValue;
-      //   }
-      // }
-
       openDialogButton.addEventListener("click", () => {
         dialog.show();
-        // openCheck(dialog);
         handleUserInput(dialog.returnValue);
       });
 
       signInButton.addEventListener("click", () => {
         dialog.show();
-        // openCheck(dialog);
-        //handleUserInput(dialog.returnValue);
       });
 
       dialog.addEventListener("close", () => {
-        // openCheck(dialog);
-        //handleUserInput(dialog.returnValue);
+        dialog.close();
       });
 
       document.querySelector("md-tabs").addEventListener('change', (event) => {
