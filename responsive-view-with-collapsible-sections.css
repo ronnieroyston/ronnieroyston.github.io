@@ -20,6 +20,7 @@ body > aside {
 	min-width: 0;
 	grid-area: aside;
 	padding: 0px 24px;
+	transition: display 1s ease-in-out;
 }
 body > aside > section {
     margin: 0px 12px 0px 12px;
@@ -84,7 +85,6 @@ body > header figure {
 	display:inline-block;
 	text-decoration: none;
 	color: inherit;
-/*    max-width: 196px;*/
     margin: 12px;
     min-height: 56px;
 }
@@ -165,7 +165,6 @@ body > nav > details > ul > li > label {
 	display: flex;
 }
 
-
 @media screen and (max-width: 767px) {
     body {
         grid-template-areas:
@@ -184,9 +183,6 @@ body > nav > details > ul > li > label {
 		list-style-type: none;
 	}
 
-	body > header {
-/*		position: absolute;*/
-	}
 	body > header > details {
 		margin-top: -80px;
 	}
