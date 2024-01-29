@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Basic Web Page">
+  <meta name="author" content="Ronnie Royston">
+  <link rel="icon" type="image/x-icon" href="/media/logo-48x48.png">
+  <link rel="stylesheet" href="style.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style></style>
+</head>
+<body>
+  <header>
+    <figure>
+      <a href="/">
+        <img src="/media/logo.png" width=48 height=48 ></img>
+        <figcaption>Cascading Style Sheets<br>Collection</figcaption>
+      </a>
+    </figure>
+    <nav>
+      <ul>
+        <li>
+          <label>Range:<input type="range" min="0" max="100"></label>
+        </li>
+        <li>
+          <input type=text></input>
+        </li>
+        <li>
+          <a href="#">Sign In</a>
+        </li>
+      </ul>
+    </nav>
+    <details open>
+      <summary></summary>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+      </ul>
+    </details>
+  </header>
+  <nav>
+    <details open>
+      <summary></summary>
+      <ul>
+        <li>
+          <a href="#">Sign In</a>
+        </li>
+        <li>
+          <input></input>
+        </li>
+        <li>
+          <label>Range:<input type="range" min="0" max="100" value="0"></label>
+        </li>
+      </ul>
+      <ul>  
+        <li>
+          <details>
+            <summary>sub navigation</summary>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="#">Link</a></li>
+        <li>
+          <details>
+            <summary>sub navigation</summary>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </details>
+  </nav>
+  <aside>
+    <details open>
+      <summary></summary>
+      <h3>HTML Markup</h3>
+      <figure>
+        <figcaption>Figure: HTML Tree</figcaption>
+        <code>
+          <pre>
+&#60;body&#62;
+  &#60;header&#62;
+    &#60;figure&#62;
+      &#60;a&#62;
+        &#60;img&#62;
+        &#60;figcaption&#62;
+    &#60;nav&#62;
+      &#60;ul .shared&#62;
+        &#60;li&#62;
+    &#60;details&#62;
+      &#60;summary&#62;
+      &#60;ul&#62;
+        &#60;li&#62;
+  &#60;nav&#62;
+    &#60;details&#62;
+      &#60;summary&#62;
+      &#60;ul .shared&#62;
+      &#60;ul&#62;
+  &#60;aside&#62;
+    &#60;details&#62;
+      &#60;summary&#62;
+  &#60;main&#62;
+  &#60;footer&#62;
+          </pre>
+        </code>
+      </figure>
+    </details>
+  </aside>
+  <main>
+    <h1>Responsive View With Collapsible Sections</h1>
+    <p>
+      This page illustrates the layout resulting from the authored and user agent style sheets against the source Hypertext Markup Language, HTML, document.
+    </p>
+    <h2>JavaScript Free</h2>
+    <p>
+      This layout does not rely on JavaScript.
+    </p>
+    <h3>Native HTML</h3>
+    <p>
+      Native header, navigation, and aside elements house expandable detail elements.
+      <figure>
+        <blockquote>
+          Elements, attributes, and attribute values in HTML are defined (by this specification) to have certain meanings (semantics). For example, the <code>ol</code> element represents an <i>ordered list</i>, and the <code>lang</code> attribute represents the language of the content.
+          <br>
+          These definitions allow HTML processors, such as web browsers or search engines, to present and use documents and applications in a wide variety of contexts that the author might not have considered.
+        </blockquote>
+        <figcaption>
+          <a href="https://html.spec.whatwg.org/multipage/dom.html#semantics-2"><cite>HTML §3.2.1 Semantics</cite></a>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          If you can use a native HTML element [HTML51] or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so.
+        </blockquote>
+        <figcaption>
+          <a href="https://www.w3.org/TR/using-aria/#firstrule"><cite>Using ARIA §2.1 First Rule of ARIA Use</cite></a>
+        </figcaption>
+      </figure>
+    </p>
+    <h3>User Agent Style Sheets</h3>
+    <p>
+      User agent style sheets, or default style sheets, are valuable. 
+      <figure>
+        <blockquote>
+          Conforming user agents must apply a default style sheet (or behave as if they did). A user agent's default style sheet should present the elements of the document language in ways that satisfy general presentation expectations for the document language (e.g., for visual browsers, the <code>EM</code> element in HTML is presented using an italic font). See A sample style sheet for HTML for a recommended default style sheet for HTML documents.
+        </blockquote>
+        <figcaption>
+          <a href="https://www.w3.org/TR/CSS21/cascade.html#cascade"><cite>CSS 2.1 Specification §6.4 The cascade</cite></a>
+        </figcaption>
+      </figure>
+    </p>
+  </main>
+  <footer>
+    <p>
+      Implementation by <a href="https://ronnieroyston.com">Ronnie Royston</a>
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+html{
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+	width: 100%;
+	margin: 0;
+	display: grid;
+	grid-gap: 4px;
+	outline: 1px dashed #616161;
+	min-height: 100vh;
+	min-width: 0;
+	color: #424242;
+	background-color: #fafafa;
+	font-family: monospace;
+	font-size: large;
+}
+body > aside {
+	overflow: hidden;
+	min-width: 0;
+	grid-area: aside;
+	padding: 0px 24px;
+}
+body > aside > section {
+    margin: 0px 12px 0px 12px;
+}
+body blockquote {
+	border-left: 4px solid rgba(41, 98, 255,0.2);
+	padding-left:24px;
+}
+body > footer {
+	overflow: hidden;  /* needed for scroll suppression */
+	min-width: 0;      /* needed for scroll suppression */
+	text-align: center;
+	grid-area: footer;
+}
+body > footer > section {
+    margin: 1em;
+    color: #9e9e9e;
+}
+body > header {
+	grid-area: header;
+}
+body blockquote {
+	margin: 12px 6px;
+}
+body figure {
+	margin: 12px 6px;
+}
+body > header > details ul {
+	position: relative;
+	display:flex;
+	flex-flow: wrap;
+	list-style-type: none;
+	min-width: 100%;
+	max-width: 100%;
+	padding: 0px;
+}
+body > header > details ul li {
+	display:inline-block;
+	min-width:84px;
+	padding: 12px 24px;
+}
+body > header > details > summary {
+	position:relative;
+	text-align: center;
+	list-style-type: "<";
+	transform: rotate(-90deg);
+	font-size: xx-large;
+	float: right;
+	margin-right: 24px;
+	left: -4px;
+}
+body > header > details[open] summary {
+	/*  list-style-type: "△" ◱ △ ✕*/ 
+	list-style-type: "<";
+	transform: rotate(90deg);
+	font-size: xx-large;
+	margin-right: initial;
+	left: initial;
+	margin-right: 24px;
+}
+body > header figure {
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+/*    max-width: 196px;*/
+    margin: 12px;
+    min-height: 56px;
+}
+body > header figure a {
+    display: flex;
+    align-items: center;
+}
+body > header > figure a figcaption {
+    margin-left: 8px;
+}
+body > header > nav {
+	float:right;
+	display:inline-block;
+    flex: 1 1 auto;
+    text-align: right;
+    margin: 0px 24px;
+	margin: 12px 64px 12px 12px;
+}
+body > main {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;  /* needed for scroll suppression */
+	min-width: 0;      /* needed for scroll suppression */
+	margin:0px 18px 18px 18px;
+	grid-area: main;
+}
+body > main > h1 {
+	margin: 0px;
+}
+body > main > section {
+	columns: 1;
+    margin-top:24px;
+}
+body > main > section > section {
+    columns: 1;
+    margin:24px;
+}
+body > nav {
+	overflow: hidden;  /* needed for scroll suppression */
+	min-width: 0;      /* needed for scroll suppression */    
+	font-weight: 300;
+	display: flex;
+	flex-flow: column nowrap;
+	grid-area: nav;
+}
+body > nav:first-child {
+    padding-top:32px;
+}
+body > nav ul {
+	list-style: none;
+	margin: 0px 24px 24px 24px;
+    text-align: left;
+}
+body > nav ul > li {
+	margin-top:16px;
+}
+body > nav > details > summary {
+	font-size:xx-large;
+	padding: 16px 16px 0px 16px;
+}
+details ::marker {
+	float:right;
+}
+body > header > nav ul {
+	list-style-type: none;
+}
+
+body > nav ul {
+	list-style-type: none;
+}
+
+body > header > nav > ul > li > label {
+	display: flex;
+}
+
+body > nav > details > ul > li > label {
+	display: flex;
+}
+
+
+@media screen and (max-width: 767px) {
+    body {
+        grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-columns: 1fr;
+    }
+	body > aside > details > summary {
+		list-style-type: "⌄";
+		font-size:x-large;
+	}
+	body > aside > details[open] summary {
+		list-style-type: none;
+	}
+
+	body > header {
+/*		position: absolute;*/
+	}
+	body > header > details {
+		margin-top: -80px;
+	}
+	body > header > details > summary {
+		margin-right: 64px;
+	    top: -52px;
+	    margin-top: 72px;
+	}
+	body > header > details[open] > summary {
+	    top: -52px;
+	    margin-right: 64px;
+	    margin-top: 72px;
+	}
+	body > header > details ul {
+		justify-content: space-between;
+	}
+	body > nav > details > summary {
+		list-style-type: "☰";
+	}
+	body > nav > details[open] > summary {
+		list-style-type: "✕";
+	}
+    body > nav > details[open] > summary {
+		text-align:right;
+	}
+	body > nav > details[open]{
+		background: white;
+	}
+    body > nav {
+    	position:absolute;
+    	top:0px;
+    	right:0px;
+    }
+    body > nav ul {
+	    padding-left: 0px;
+	}
+    body > header {
+        width:100%;
+    }
+    body > main > section {
+    	width: fit-content;
+        margin:24px;
+    }
+    body > nav > details > ul:first-of-type li {
+    	display:block;
+    }
+    body > header > nav {
+    	display:none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		grid-template-areas:
+		"header header header"
+		"nav main aside"
+		"footer footer footer";
+		grid-template-rows: auto 1fr auto;
+		grid-template-columns: auto 1fr auto;
+	}
+	body > aside > details {
+		max-width: 312px;
+	}
+	body > aside > details > summary {
+		list-style-type: "<";
+		font-size:xx-large;
+	}
+	body > aside > details[open] summary {
+		list-style-type: ">";
+	}
+	body > header {
+		margin-bottom: -20px;
+	}
+    body > header > details {
+		position:relative;
+		text-align: right;
+		clear: both;
+		top: -59px;
+	}
+	body > header > details[open] {
+		top: initial;
+		top:-36px;
+	}
+	body > header > details[open] summary {
+		top:-22px;
+	}
+	body > header > details ul {
+		flex-flow: row-reverse;
+	}
+	body > header > nav > ul li {
+		display:inline-block;
+	}
+    body > nav > details > summary {
+		list-style-type: "⋮";
+		margin-left: 16px;
+		top: -14px
+	}
+	body > nav > details > summary {
+		list-style-type: ">";
+	}
+	body > nav > details[open] > summary {
+		text-align:right;
+		background-color:initial;
+		list-style-type: "<";
+	}
+    body > nav > details > ul:first-of-type li {
+    	display:none;
+    }
+    body > header > nav ul li {
+    	display:inline-block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body > main > section {
+        columns: 2;
+    }
+}
