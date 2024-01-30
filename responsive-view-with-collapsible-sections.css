@@ -270,7 +270,7 @@ body > nav > details > ul > li > label {
 		top:-22px;
 	}
 	body > header > details ul {
-		flex-flow: row-reverse;
+		flex-flow: row;
 	}
 	body > header > nav > ul li {
 		display:inline-block;
