@@ -60,40 +60,32 @@ body > header > details ul {
 body > header > details ul li {
 	display:inline-block;
 	min-width:84px;
-	padding: 12px 24px;
+	padding: 12px;
 }
 body > header > details > summary {
 	position:relative;
 	text-align: center;
-	list-style-type: "<";
-	transform: rotate(-90deg);
 	font-size: xx-large;
 	float: right;
 	margin-right: 24px;
-	left: -4px;
 }
 body > header > details[open] summary {
-	/*  list-style-type: "△" ◱ △ ✕*/ 
-	list-style-type: "<";
-	transform: rotate(90deg);
 	font-size: xx-large;
 	margin-right: initial;
-	left: initial;
 	margin-right: 24px;
 }
 body > header figure {
-	display:inline-block;
+	display:inline-flex;
+	align-items:center;
 	text-decoration: none;
 	color: inherit;
     margin: 12px;
     min-height: 56px;
+    max-width: 312px;
 }
-body > header figure a {
-    display: flex;
-    align-items: center;
-}
-body > header > figure a figcaption {
+body > header > figure figcaption {
     margin-left: 8px;
+    display:inline-block;
 }
 body > header > nav {
 	float:right;
@@ -176,7 +168,7 @@ body > nav > details > ul > li > label {
         grid-template-columns: 1fr;
     }
 	body > aside > details > summary {
-		list-style-type: "⌄";
+		list-style-type: initial;
 		font-size:x-large;
 	}
 	body > aside > details[open] summary {
@@ -188,24 +180,27 @@ body > nav > details > ul > li > label {
 	}
 	body > header > details > summary {
 		margin-right: 64px;
-	    top: -52px;
+	    top: -45px;
 	    margin-top: 72px;
+		list-style-type: default;
+	    font-size: revert;
 	}
 	body > header > details[open] > summary {
-	    top: -52px;
+	    top: -45px;
 	    margin-right: 64px;
 	    margin-top: 72px;
+		list-style-type: default;
+	    font-size: revert;
 	}
 	body > header > details ul {
 		justify-content: space-between;
 	}
 	body > nav > details > summary {
-		list-style-type: "☰";
+		list-style-type: default;
+		padding: 21px 16px 0px 16px;
 	}
 	body > nav > details[open] > summary {
-		list-style-type: "✕";
-	}
-    body > nav > details[open] > summary {
+		list-style-type: default;
 		text-align:right;
 	}
 	body > nav > details[open]{
@@ -269,8 +264,23 @@ body > nav > details > ul > li > label {
 	body > header > details[open] summary {
 		top:-22px;
 	}
+	body > header > details > summary {
+		list-style-type: "<";
+		transform: rotate(-90deg);
+		margin-right: 24px;
+		left: -4px;
+	}
+	body > header > details[open] summary {
+		/*  list-style-type: "△" ◱ △ ✕*/ 
+		list-style-type: "<";
+		transform: rotate(90deg);
+		left: initial;
+		margin-right: 24px;
+	}
+
 	body > header > details ul {
 		flex-flow: row;
+		justify-content: flex-end;
 	}
 	body > header > nav > ul li {
 		display:inline-block;
@@ -294,6 +304,7 @@ body > nav > details > ul > li > label {
     body > header > nav ul li {
     	display:inline-block;
     }
+
 }
 
 @media screen and (min-width: 1200px) {
